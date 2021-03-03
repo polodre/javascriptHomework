@@ -7,6 +7,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -17,8 +18,23 @@ function writePassword() {
 }
 
 function generatePassword() {
-  console.log("generatePassword");
+  //console.log("generatePassword");
+  //prompt("how long do you want your password?")
+  let passwordLength = prompt("how long do you want your password?");
+
+  console.log(passwordLength);
+
+  if (passwordLength < 8) {
+    alert("your password is not log enough"); 
+    return;
+  }
+
+  if (passwordLength > 128) {
+    alert("your password is too long");
+    return;
+  }
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
