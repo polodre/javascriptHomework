@@ -25,7 +25,7 @@ function generatePassword() {
   console.log(passwordLength);
 
   if (passwordLength < 8) {
-    alert("your password is not log enough");
+    alert("your password does not meet the requirements");
     return;
   }
 
@@ -94,7 +94,12 @@ function generatePassword() {
   }
   
   
-   
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+   }
 
 
 
