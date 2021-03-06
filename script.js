@@ -20,17 +20,17 @@ function writePassword() {
 function generatePassword() {
   //console.log("generatePassword");
   //prompt("how long do you want your password?")
-  let passwordLength = prompt("how long do you want your password?");
+  let passwordLength = prompt("Choose a password that contains between 8 and 128 characters");
 
   console.log(passwordLength);
 
   if (passwordLength < 8) {
-    alert("your password does not meet the requirements");
+    alert("Your password does not meet the requirements");
     return;
   }
 
   if (passwordLength > 128) {
-    alert("your password is too long");
+    alert("Your password is too long");
     return;
   }
 
